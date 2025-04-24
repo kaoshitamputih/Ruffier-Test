@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QLabel,
                              QVBoxLayout, QHBoxLayout, QRadioButton, QMessageBox)
 
 from instr import *
+from test_win import *
 
 class MainWin(QWidget):
     def __init__(self):
@@ -29,7 +30,8 @@ class MainWin(QWidget):
         self.setLayout(self.layout_line)
 
     def next_click(self):
-        pass
+        self.tw = TestWin()
+        self.hide()
 
     def connects(self):
         self.btn_next.clicked.connect(self.next_click)
